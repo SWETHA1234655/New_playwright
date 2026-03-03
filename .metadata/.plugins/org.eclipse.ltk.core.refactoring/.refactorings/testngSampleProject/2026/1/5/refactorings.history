@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;SeleniumExamples&apos; to &apos;seleniumTCs&apos;&#x0D;&#x0A;- Original project: &apos;testngSampleProject&apos;&#x0D;&#x0A;- Original element: &apos;testngSampleProject/src/test/java/SeleniumExamples&apos;&#x0D;&#x0A;- Renamed element: &apos;testngSampleProject/src/test/java/seleniumTCs&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;SeleniumExamples&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;SeleniumExamples" name="seleniumTCs" qualified="false" references="true" stamp="1769583678037" textual="false" version="1.0"/>
+</session>

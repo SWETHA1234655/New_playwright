@@ -1,0 +1,21 @@
+package firstProject;
+
+import org.openqa.selenium.By;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class login {
+	public static void main(String[] args) {
+		WebDriver driver=new EdgeDriver();
+		driver.get("https://www.facebook.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.id("email")).sendKeys("swetha2send@gmail.com");
+		driver.findElement(By.id("pass")).sendKeys("Swetha@Ak123");
+		driver.findElement(By.name("login")).click();
+		
+	}
+
+}

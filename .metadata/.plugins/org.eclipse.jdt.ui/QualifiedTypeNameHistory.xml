@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
+    <fullyQualifiedTypeName name="java.time.Duration"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Browser.CloseOptions"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.assertions.PlaywrightAssertions"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.ElementHandle.ScreenshotOptions"/>
+    <fullyQualifiedTypeName name="java.nio.file.Paths"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Playwright"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Page.ScreenshotOptions"/>
+    <fullyQualifiedTypeName name="com.microsoft.playwright.Locator.ScreenshotOptions"/>
+    <fullyQualifiedTypeName name="org.assertj.core.util.Arrays"/>
+</qualifiedTypeNameHistroy>

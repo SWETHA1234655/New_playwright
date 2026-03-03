@@ -1,0 +1,83 @@
+package seleniumPractice;
+
+import java.time.Duration;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+public class amazonBasicTest {
+	
+	public static void main(String[] args) throws Exception {
+		
+		// Initialize ChromeDriver
+		WebDriver driver = new ChromeDriver();
+		//Declaration of webdriverwait
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		//open the amazon website
+		driver.get("https://www.amazon.in/");
+		//maximize the window
+		driver.manage().window().maximize();
+		//Expected title of amazon home page
+		String Expected_Title="Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
+		//Actual title fetched from the browser
+		String Actual_Title=driver.getTitle();
+		
+		System.out.println(Actual_Title);
+		
+		// Verify if the actual title matches the expected title
+		if(Expected_Title.equals(Actual_Title)) {
+			System.out.println("Site is open properly");
+		}
+		else {
+			System.out.println("Site not opened");
+		}
+		// Check if the Amazon logo is displayed
+		WebElement check_logo=driver.findElement(By.xpath("//a[@aria-label=\"Amazon.in\"]"));
+		
+		if(check_logo.isDisplayed()) {
+			System.out.println("amazon logo is displayed");
+		}
+		else {
+			System.out.println("amazon logo is not displayed");
+		}
+		// Enter product name in the search box
+		WebElement enterproduct=driver.findElement(By.id("twotabsearchtextbox"));
+		enterproduct.sendKeys("Bluetooth headset");
+		// Click on the search button
+		WebElement searchproduct=driver.findElement(By.cssSelector("input[value=\"Go\"]"));
+		searchproduct.click();
+		// Click on the 'boAt' brand filter
+		WebElement selectboat=driver.findElement(By.xpath("//span[text()='boAt']"));
+		selectboat.click();
+		// Find all product elements in the search results
+		List<WebElement> products=driver.findElements(By.xpath("//div[@class=\"sg-col-4-of-24 sg-col-4-of-12 s-result-item s-asin sg-col-4-of-16 sg-col s-widget-spacing-small sg-col-4-of-20\"]"));
+		System.out.println(products.size());
+		// Iterate through the list of products
+		for(WebElement datas: products) {
+			// Get the name of the product
+			String Nameoftheproduct=datas.findElement(By.xpath(".//div[@data-cy='title-recipe']")).getText();
+			// Get the price of the product
+			String Priceoftheproduct=datas.findElement(By.xpath(".//div[@class='a-section a-spacing-none a-spacing-top-small s-price-instructions-style']//span[@class='a-price-whole']")).getText();
+			// Remove commas from the price
+			String Price=Priceoftheproduct.replace(",", "");
+			// Convert price to integer
+			int PriceValue=Integer.parseInt(Price);
+			// Check if the price is greater than or equal to 1000
+			if(PriceValue >=1000) {
+				System.out.println("Name of the Product :"+Nameoftheproduct);
+				System.out.println("Price of the Product :"+Price);
+				System.out.println("======================================================================");
+				
+			}
+		}
+		
+		
+	}
+
+}
